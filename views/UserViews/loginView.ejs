@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/55a623cc56.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
+      integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+      integrity="sha384-tKLJeE1ALTUwtXlaGjJYM3sejfssWdAaWR2s97axw4xkiAdMzQjtOjgcyw0Y50KU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Register</title>
+  </head>
+  <body>
+    <div class="grid-register">
+      <div class="register-item1">
+        <div class="card" style="width: 18rem">
+          <img
+            src="images/companylogo.png"
+            style="width: 100px"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title" style="color: red">AVORIKA</h5>
+            <%if(typeof pass !='undefined'){%>
+              <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong><%=pass%></strong> 
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+              <%}%>
+            <form action="/login" method="post" name="registerform">
+              <div class="mb-6">
+                <div class="input-container">
+                  <i class="fas fa-at icon"></i>
+                  <input
+                    class="input-field"
+                    type="email"
+                    placeholder="Email"
+                    name="email"
+                  />
+                </div>
+              </div>
+
+              <div class="mb-6">
+                <div class="input-container">
+                  <i class="fas fa-key icon"></i>
+                  <input
+                    class="input-field"
+                    type="password"
+                    placeholder="Password"
+                    name="password"
+                  />
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <div class="mb-6" style="margin: 10px;">
+              <a href="/register">Register here</a>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <script src="javascripts/mainJS.js"></script>
+  </body>
+</html>

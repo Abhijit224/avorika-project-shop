@@ -1,0 +1,30 @@
+{
+  "name": "avorika-project-shop",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "bcrypt": "^5.0.1",
+    "connect-flash": "^0.1.1",
+    "connect-mongodb-session": "^3.1.0",
+    "cookie-parser": "^1.4.5",
+    "cookie-session": "^1.4.0",
+    "debug": "^2.6.9",
+    "dotenv": "^10.0.0",
+    "ejs": "^2.6.2",
+    "express": "^4.16.4",
+    "express-session": "^1.17.2",
+    "express-validator": "^6.12.1",
+    "http-errors": "^1.6.3",
+    "mongoose": "^6.0.5",
+    "morgan": "^1.9.1",
+    "passport": "^0.4.1",
+    "passport-google-oauth20": "^2.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
