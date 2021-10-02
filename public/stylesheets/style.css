@@ -1,0 +1,225 @@
+body {
+    padding: 0px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #00B7FF;
+}
+
+header {
+    text-align: center;
+}
+
+main {
+    text-align: center;
+    background-color: lightblue;
+}
+
+footer {
+    text-align: center;
+    background-color: dodgerblue;
+    margin-bottom: 0px;
+    height: 20vh;
+}
+
+.bg-light {
+    background-color: dodgerblue !important;
+}
+
+.navbar-light .navbar-brand {
+    color: blue;
+}
+
+.navbar-brand {
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+    white-space: nowrap;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .show>.nav-link {
+    color: blue(0, 0, 0, 0.9);
+}
+
+.navbar-brand {
+    font-size: 16px;
+}
+
+.forgotpassword {
+    color: red;
+    font-size: 10px;
+}
+
+.row {
+    margin: 1px;
+    text-align: center;
+}
+
+.col {
+    margin: 1px;
+    padding: 5px;
+}
+
+.nav-item {
+    font-size: small;
+}
+
+.footerul {
+    list-style: none;
+}
+
+.footerli {
+    color: red;
+}
+
+.register {
+    text-align: center;
+    margin: 50px;
+}
+
+.card {
+    position: relative;
+    display: contents;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 15px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-row-gap: 10px;
+    grid-template-columns: auto auto auto;
+    background-color: #2196F3;
+    padding: 5px;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 5px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.grid-register {
+    display: grid;
+    grid-row-gap: 10px;
+    grid-template-columns: auto;
+    background-color: #2196F3;
+    padding: 10px;
+}
+
+.register-item1 {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 10%;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+@media only screen and (max-width:600px) {
+    .grid-register {
+        display: grid;
+        grid-row-gap: 10px;
+        grid-template-columns: auto;
+        background-color: #2196F3;
+        padding: 10px;
+    }
+    .register-item1 {
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid red;
+        padding: 15px;
+        font-size: 12px;
+        text-align: center;
+        margin: 10%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .grid-container {
+        display: grid;
+        grid-row-gap: 10px;
+        grid-template-columns: auto auto;
+        background-color: #2196F3;
+        padding: 5px;
+        text-align: center;
+    }
+    .grid-item {
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 5px;
+        font-size: 12px;
+        text-align: center;
+    }
+}
+
+.input-container {
+    display: -ms-flexbox;
+    /* IE10 */
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.icon {
+    padding: 10px;
+    background: dodgerblue;
+    color: white;
+    min-width: 50px;
+    text-align: center;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+}
+
+.input-field:focus {
+    border: 2px solid dodgerblue;
+}
+
+.sociialitem-ul {
+    list-style-type: none;
+    margin: 5px;
+    padding: 5px;
+    overflow: hidden;
+    display: inline-flex;
+}
+
+.socialitem-li {
+    margin: 5px;
+}
+
+.alert-warning {
+    color: blue;
+    background-color: chocolate;
+    border-color: blue;
+}
+
+.alert-dismissible {
+    padding-right: 3rem;
+}
+
+.alert {
+    position: relative;
+    padding: 1rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
