@@ -23,6 +23,7 @@ router.post("/", async(req, res) => {
                         res.redirect('/admin')
                     } else if (olduser.UserRole == 'Shop') {
                         console.log("open company page")
+                        req.session.data = olduser
                         res.redirect('/company')
                     } else {
                         console.log('open customer page')
