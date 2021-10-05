@@ -15,11 +15,18 @@
                               Select Category
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item" value='action1' href="#">Action</a></li>
+                                <%for(var i=0;i<list.length;i++){%>
+                                    <li><a class="dropdown-item" value='action1' href="#"><%=list[i].CategoryName%></a></li>
+                                    <ul>
+                                        <%for(var i=0;i<list.SubCat)%>
+                                        <li>a</li>
+                                    </ul>
+                                <%}%>                               
                                 <li><a class="dropdown-item" value='action2' href="#">Another action</a></li>
                                 <li><a class="dropdown-item" value='action3' href="#">Something else here</a></li>
                             </ul>
                         </div>
+                        
                     </div>
                     <div class="mb-3">
                         <label for="productdescription" class="form-label">Product Description</label>
