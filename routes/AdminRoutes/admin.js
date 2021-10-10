@@ -18,14 +18,10 @@ router.post('/addcategory', (req, res) => {
     new Category({
         CategoryName: req.body.categoryname,
         CategoryDescription: req.body.categorydescription,
-        SubCategory:{
-            price: req.body.selectprice,
-            discount: req.body.discount,
-            make: req.body.make,
-        }
-        
+               
     }).save().then((result)=>{
-        console.log(result.SubCategory.discount)
+        console.log(result)
+     
     }).catch((error)=>{
         console.log(error)
     })

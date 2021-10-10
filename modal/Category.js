@@ -6,18 +6,8 @@ const CategoriesSchema = mongoose.Schema({
     },
     CategoryDescription: {
         type: String
-    },
-    SubCategory:{
-        price:{
-            type:String,
-        },
-        discount:{
-            type:String,
-        },
-        make:{
-            type:String,
-        }
     }
+    
 })
 const Category = mongoose.model('category', CategoriesSchema);
 module.exports = Category;

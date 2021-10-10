@@ -12,5 +12,19 @@ router.get('/', async(req, res) => {
     })
 
 })
+router.post('/addproduct',(req,res)=>{
+    const p ={
+        pname:req.body.productname,
+        pcategory:req.body.selectcategory,
+        pricerange:req.body.selectpricerange,
+        make:req.body.make,
+        Description:req.body.productdescription,
+        price:req.body.productprice,
+        discount:req.body.productdiscount,
+       
+
+    }
+    console.log(p)
+})
 
 module.exports = router;
