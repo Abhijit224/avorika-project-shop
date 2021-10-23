@@ -22,3 +22,7 @@ $(document).ready(function() {
         $('#sidebar').toggleClass('active');
     });
 });
+
+function update() {
+    console.log("Abhijit is working")
+}
