@@ -15,7 +15,8 @@ var usersRouter = require("./routes/UserRoutes/user");
 var usersRouter = require("./routes/UserRoutes/register");
 var usersRouter = require("./routes/UserRoutes/login");
 var adminRouter = require("./routes/AdminRoutes/admin");
-var companyRouter = require('./routes/CompanyRoutes/company')
+var companyRouter = require('./routes/CompanyRoutes/company');
+var forgotpassword = require('./routes/UserRoutes/forgotpassword');
 
 var app = express();
 
@@ -73,6 +74,8 @@ app.use("/admin", adminRouter);
 app.use("/user", require("./routes/UserRoutes/user"));
 app.use("/logout", require("./routes/UserRoutes/logout"));
 app.use('/company', companyRouter);
+app.use('/forgotpass', forgotpassword);
+app.use("/", require('./routes/UserRoutes/resetpassword'))
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
