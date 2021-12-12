@@ -16,6 +16,7 @@ var usersRouter = require("./routes/UserRoutes/register");
 var usersRouter = require("./routes/UserRoutes/login");
 var adminRouter = require("./routes/AdminRoutes/admin");
 var companyRouter = require('./routes/CompanyRoutes/company')
+var updateProduct = require("./routes/CompanyRoutes/updateProduct")
 
 var app = express();
 
@@ -63,8 +64,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
+app.use("/ProductImages", express.static("ProductImages"))
 app.use(flash());
-
+//defining
 app.use("/", indexRouter);
 app.use("/register", require("./routes/UserRoutes/register"));
 app.use("/login", require("./routes/UserRoutes/login"));
@@ -73,6 +75,8 @@ app.use("/admin", adminRouter);
 app.use("/user", require("./routes/UserRoutes/user"));
 app.use("/logout", require("./routes/UserRoutes/logout"));
 app.use('/company', companyRouter);
+app.use('/updateProduct', updateProduct)
+app.use('/update', updateProduct)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

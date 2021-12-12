@@ -17,8 +17,6 @@ router.post(
         check("firstname", "First Name must be 3+ character long..")
         .exists()
         .isLength({ min: 3 }),
-
-
     ],
     async(req, res, done) => {
 

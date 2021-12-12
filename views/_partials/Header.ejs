@@ -17,8 +17,15 @@
               Category
             </a></i>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Tv</a></li>
+                        <%for(var i=0;i<categorylist.length;i++){%>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <%=categorylist[i].CategoryName%>
+                                </a>
+                            </li>
+                            <%}%>
                     </ul>
+
                 </li>
                 <li class="nav-item">
                     <i class="fas fa-address-card"></i><a class="nav-link" href="#">About</a></i>
@@ -35,15 +42,12 @@
                 <% if(info==undefined){%>
                     <li class="nav-item">
                         <i class="fas fa-sign-in-alt"><a class="nav-link" href="/login">Sign In</a></i>
-
                     </li>
                     <%}else{%>
                         <li class="nav-item">
                             <i class="fas fa-sign-in-alt"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#profilemodal">Hi...<%=info.UserFirstName%></a></i>
                         </li>
                         <%}%>
-
-
             </ul>
             <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

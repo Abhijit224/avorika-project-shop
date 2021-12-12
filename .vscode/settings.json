@@ -1,5 +1,6 @@
 {
     "git.autoStash": true,
     "git.autofetch": true,
-    "git.showPushSuccessNotification": true
+    "git.showPushSuccessNotification": true,
+    "workbench.colorTheme": "Cobalt2"
 }
