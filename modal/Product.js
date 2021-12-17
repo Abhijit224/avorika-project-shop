@@ -4,7 +4,7 @@ const ProductSchema = new mongoose.Schema({
     ProductName: {
         type: String,
     },
-    ProduuctCategory: {
+    ProductCategory: {
         type: String,
     },
     ProductPriceRange: {
@@ -22,8 +22,16 @@ const ProductSchema = new mongoose.Schema({
     ProductDiscount: {
         type: String
     },
+    ProductFinalPrice: {
+        type: String
+    },
     ProductImage: {
         type: String
+    },
+    SupplierRef: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "SupplierSchema",
     }
-
 })
+const Product = mongoose.model('product', ProductSchema);
+module.exports = Product;

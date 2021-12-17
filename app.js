@@ -15,8 +15,9 @@ var usersRouter = require("./routes/UserRoutes/user");
 var usersRouter = require("./routes/UserRoutes/register");
 var usersRouter = require("./routes/UserRoutes/login");
 var adminRouter = require("./routes/AdminRoutes/admin");
-var companyRouter = require('./routes/CompanyRoutes/company')
-
+var companyRouter = require('./routes/CompanyRoutes/company');
+var updateProduct = require("./routes/CompanyRoutes/updateProduct");
+var deleteProduct = require('./routes/CompanyRoutes/delecteproduct');
 var app = express();
 
 require("dotenv").config();
@@ -63,6 +64,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
+app.use("/ProductImages", express.static("ProductImages"))
 app.use(flash());
 
 app.use("/", indexRouter);
@@ -73,6 +75,9 @@ app.use("/admin", adminRouter);
 app.use("/user", require("./routes/UserRoutes/user"));
 app.use("/logout", require("./routes/UserRoutes/logout"));
 app.use('/company', companyRouter);
+app.use('/updateProduct', updateProduct)
+app.use('/update', updateProduct)
+app.use("/deleteproduct", deleteProduct);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

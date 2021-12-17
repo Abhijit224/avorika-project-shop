@@ -1,16 +1,39 @@
 var express = require("express");
 var router = express.Router();
+const Category = require('../modal/Category')
+
 
 /* GET home page. */
-router.get("/", function(req, res, next) {
-    res.render("index", { title: "Abhijit", info: undefined });
+router.get("/", async(req, res, next) => {
+    await Category.find()
+        .then((categories) => {
+            // res.render('index', {
+            //     title: "Abhijit",
+            //     info: undefined,
+            //     categorylist: categories
+            res.render("index", {
+                title: "Abhijit",
+                info: undefined,
+                categorylist: categories
+            });
+        })
+
+    .catch((error) => {
+            console.log(error)
+        })
+        // res.render("index", { title: "Abhijit", info: undefined });
 });
-router.get("/index", (req, res) => {
+
+router.get("/index", async(req, res) => {
     const data = req.session.data;
     console.log("index router with session data..." + data)
-    res.render("index", {
-        info: data,
-    });
+    await Category.find().then((categories) => {
+        res.render("index", {
+            info: data,
+            categorylist: categories
+        });
+    }).catch((error))
+
 });
 
 module.exports = router;

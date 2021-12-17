@@ -14,10 +14,11 @@ router.get("/", (req, res) => {
 router.post("/", async(req, res) => {
     await User.findOne({ UserEmail: req.body.email })
         .then((olduser) => {
+
             const pass = olduser.UserPassword;
             bcrypt.compare(req.body.password, pass, function(err, result) {
                 if (result === true) {
-                    if (olduser.UserEmail == 'kalukhe.abhijit@gmail.com') {
+                    if (olduser.UserEmail == process.env.MainEmail) {
                         console.log('open admin page')
                         req.session.data = olduser
                         res.redirect('/admin')
@@ -37,7 +38,7 @@ router.post("/", async(req, res) => {
         })
         .catch((error) => {
             console.log(error);
-            res.render("UserViews/loginView", { pass: "something is missing" });
+            res.render("UserViews/loginView", { pass: "something is missing or email is not present" });
         });
 });
 module.exports = router;

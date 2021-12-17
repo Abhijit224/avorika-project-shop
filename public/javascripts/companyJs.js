@@ -29,3 +29,18 @@ deleteproductbutton.addEventListener('click', () => {
         deleteproduct.style.display = 'none'
     }
 })
+
+function finalprice() {
+    var price = document.getElementById("productprice").value;
+    var discount = document.getElementById("productdiscount").value;
+    console.log(price + "------" + discount)
+    var pd = price * discount / 100;
+    var finalPrice = price - pd;
+    console.log(finalPrice)
+    document.getElementById("productfinalprice").value = finalPrice
+}
+
+function clearform() {
+    document.getElementById("formId").reset();
+
+}

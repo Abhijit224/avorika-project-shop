@@ -222,3 +222,13 @@ footer {
     border: 1px solid transparent;
     border-radius: .25rem;
 }
+
+.card-title {
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}

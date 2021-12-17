@@ -1,1 +1,60 @@
-<h1>Edit product here</h1>
+<div class="container">
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Product Category</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Discount</th>
+                    <th scope="col">Final Price</th>
+                    <th scope="col">Manufrature</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%for(var i=0;i<productlist.length;i++){%>
+                    <tr>
+                        <th scope="row">
+                            <%=i+1%>
+                        </th>
+                        <td>
+                            <%=productlist[i].ProductName%>
+                        </td>
+                        <td>
+                            <%=productlist[i].ProductCategory%>
+                        </td>
+                        <td>
+                            <%=productlist[i].ProductPrice%>
+                        </td>
+                        <td>
+                            <%=productlist[i].ProductDiscount%>
+                        </td>
+                        <td>
+                            <%=productlist[i].ProductFinalPrice%>
+                        </td>
+                        <td>
+                            <%=productlist[i].ProductMake%>
+                        </td>
+                        <td>
+                            <%=productlist[i].ProductDescription%>
+                        </td>
+                        <td>
+                            <img src="<%=productlist[i].ProductImage%>" style="width: 60%;">
+                        </td>
+                        <td>
+                            <a href="/updateProduct/<%=productlist[i].id%>"><i class="fas fa-pen-alt"></i></a>
+                            <br>
+                            <br>
+                            <br>
+                            <a href="/deleteproduct/<%=productlist[i].id%>"><i class="fas fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                    <%}%>
+            </tbody>
+        </table>
+    </div>
+</div>

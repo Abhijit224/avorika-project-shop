@@ -1,5 +1,6 @@
 console.log("Main JS is running");
 
+
 function GetSelectedTextValue() {
     var name = document.getElementById("selectRole").value;
 
@@ -22,3 +23,12 @@ $(document).ready(function() {
         $('#sidebar').toggleClass('active');
     });
 });
+
+function finalprice() {
+    const price = document.getElementById('productprice').value
+    const discount = document.getElementById('productdiscount').value
+    const sum = price * discount / 100
+    const finalprice = price - sum
+    document.getElementById('productfinalprice').value = finalprice
+    console.log(finalprice)
+}
